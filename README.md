@@ -23,7 +23,7 @@ The name comes from:
 - REST API for developing 3rd party apps
 - Admin panel for user self-service and raw data access
 
-## About
+##  About
 
 This addon is based on *alpine* docker image made by https://github.com/sissbruecker/linkding
 It provides admin user configuration, no need to launch docker commands to create admin.
@@ -31,7 +31,7 @@ I didn't expose all other settings, let's see if it is needed at some point.
 
 Happy bookmarking !
 
-## Installation
+##  Installation
 
 1. [Add my Linkding add-on repository](https://github.com/diyanei/hassio-linkding.git) to your Home Assistant instance.
 1. Install this add-on.
