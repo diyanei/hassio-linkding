@@ -1,0 +1,31 @@
+name: "Linkding"
+description: "linkding is a bookmark manager designed be to be minimal, fast, and easy to set up."
+version: "0.1.0"
+slug: "linkding"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+ports:
+  9090/tcp: 9090
+startup: services
+map:
+  - type: data
+    read_only: false
+    path: /etc/linkding/data
+options:
+  superuser_name: null
+  superuser_password: null
+  superuser_email: null
+  ssl: false
+schema:
+  superuser_name: str?
+  superuser_password: password?
+  superuser_email: email?
+  ssl: bool
+configuration:
+  superuser_name:
+    name: Define a superuser name
+    description: When set, creates an initial superuser with the specified username when starting the container. Does nothing if the user already exists
+webui: "[PROTO:ssl]://[HOST]:[PORT:9090]"

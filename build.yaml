@@ -1,0 +1,5 @@
+---
+build_from:
+  amd64: sissbruecker/linkding:1.36.0-alpine
+  aarch64: sissbruecker/linkding:1.36.0-alpine
+  armv7: sissbruecker/linkding:1.36.0-alpine

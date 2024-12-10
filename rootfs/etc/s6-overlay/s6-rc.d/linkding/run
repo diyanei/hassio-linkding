@@ -1,0 +1,27 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the example service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+# Add your code here
+
+# Declare variables
+declare name
+declare password
+declare email
+
+name=$(bashio::config 'superuser_name')
+password=$(bashio::config 'superuser_password')
+email=$(bashio::config 'superuser_email')
+
+if [ ! -z "${name}" ]; then
+	bashio::log.info "Setting superuser to ${name}"
+	export LD_SUPERUSER_NAME=${name}
+	export LD_SUPERUSER_PASSWORD=${password}
+fi
+
+bashio::log.info 'Starting the linkding server...'
+cd /etc/linkding || bashio::exit.nok
+## Run your program
+exec ./bootstrap.sh
