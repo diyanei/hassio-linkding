@@ -1,6 +1,6 @@
 name: "Linkding"
 description: "linkding is a bookmark manager designed be to be minimal, fast, and easy to set up."
-version: "0.1.0"
+version: "1.36.0-alpine"
 slug: "linkding"
 init: false
 arch:
@@ -10,6 +10,7 @@ arch:
 ports:
   9090/tcp: 9090
 startup: services
+url: https://github.com/diyanei/hassio-linkding
 map:
   - type: data
     read_only: false
