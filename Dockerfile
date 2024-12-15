@@ -43,7 +43,7 @@ RUN \
     \
     && apk add --no-cache \
         bash=5.2.26-r0 \
-        curl=8.11.0-r2 \
+        curl=8.9.1-r2 \
         jq=1.7.1-r0 \
         tzdata=2024b-r0 \
     \
