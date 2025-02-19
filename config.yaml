@@ -1,6 +1,6 @@
 name: "Linkding"
 description: "linkding is a bookmark manager designed be to be minimal, fast, and easy to set up."
-version: "1.36.0-alpine"
+version: "1.36.0-1"
 slug: "linkding"
 init: false
 arch:
