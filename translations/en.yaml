@@ -1,0 +1,7 @@
+configuration:
+  superuser_name:
+    name: Define a superuser name
+    description: When set, creates an initial superuser with the specified username when starting the container. Does nothing if the user already exists
+  max_memory_MB:
+    name: Max allowed memory for linkding
+    description: Define the max memory in MB which will be allowed to linkding. By default, no limit is set.

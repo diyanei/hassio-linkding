@@ -36,15 +36,15 @@ RUN \
         "xz>=5.6.2-r0" \
     \
     && apk add --no-cache \
-        "libcrypto3~=3.3" \
-        "libssl3~=3.3" \
+        "libcrypto3~=3.5" \
+        "libssl3~=3.5" \
         "musl-utils~=1.2" \
         "musl~=1.2" \
     \
     && apk add --no-cache \
         "bash~=5.2" \
-        "curl~=8.9" \
-        "jq~=1.7" \
+        "curl~=8.14" \
+        "jq~=1.8" \
         "tzdata>=2024b-r0" \
     \
     && S6_ARCH="${BUILD_ARCH}" \

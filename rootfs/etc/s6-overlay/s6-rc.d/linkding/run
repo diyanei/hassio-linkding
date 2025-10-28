@@ -10,15 +10,23 @@
 declare name
 declare password
 declare email
+declare max_memory
 
 name=$(bashio::config 'superuser_name')
 password=$(bashio::config 'superuser_password')
 email=$(bashio::config 'superuser_email')
+max_memory=$(bashio::config 'max_memory_MB')
 
 if [ ! -z "${name}" ]; then
 	bashio::log.info "Setting superuser to ${name}"
 	export LD_SUPERUSER_NAME=${name}
 	export LD_SUPERUSER_PASSWORD=${password}
+fi
+
+if [ ${max_memory} -gt 0 ]; then
+	# 1 Byte per FD 131072 = 1 MB / 8
+	export UWSGI_MAX_FD=$((max_memory * 131072))
+	bashio::log.info "Setting max memory to ${max_memory}MB, with max_fd set to ${UWSGI_MAX_FD}"
 fi
 
 bashio::log.info 'Starting the linkding server...'
